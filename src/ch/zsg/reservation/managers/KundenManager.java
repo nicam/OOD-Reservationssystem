@@ -5,6 +5,7 @@ import java.util.Iterator;
 
 import ch.zsg.reservation.model.*;
 
+@SuppressWarnings("serial")
 public class KundenManager extends ArrayList<Kunde> {
 	
 	Kunde generic = new Kunde("Neuen Kunden hinzufügen");

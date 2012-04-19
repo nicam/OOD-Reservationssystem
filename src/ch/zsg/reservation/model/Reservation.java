@@ -1,9 +1,8 @@
 package ch.zsg.reservation.model;
 import java.util.*;
 
-
 public class Reservation {
-	private int anzahlTisch, anzahlMitnahme, klasse;
+	private int klasse;
 	private Kunde kunde;
 	private List<Strecke> strecken = new ArrayList<Strecke>();
 	private List<Historie> history;
@@ -11,8 +10,6 @@ public class Reservation {
 	public Reservation(ReservierbareFahrt fahrt, Kunde kunde, int anzahlTisch, int anzahlMitnahme, int klasse) {
 		super();
 		this.kunde = kunde;
-		this.anzahlTisch = anzahlTisch;
-		this.anzahlMitnahme = anzahlMitnahme;
 		this.klasse = klasse;
 
 		this.reserve(fahrt, kunde, anzahlTisch, anzahlMitnahme, klasse);

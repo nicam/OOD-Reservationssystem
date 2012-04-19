@@ -11,6 +11,10 @@ import ch.zsg.reservation.model.Kunde;
 import javax.swing.border.BevelBorder;
 
 public class View extends JFrame {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private ReservationSystem controller;
 	private JTextField name, telefon, adresse, plz, ort;
 	private JComboBox comboFahrt, comboKunde;
@@ -83,10 +87,16 @@ public class View extends JFrame {
 		panel.add(rdbtnErste);
 
 		JRadioButton rdbtnZweite = new JRadioButton("Zweite");
+		rdbtnZweite.setSelected(true);
 		klasse.add(rdbtnZweite);
 		panel.add(rdbtnZweite);
 
 		JButton btnClear = new JButton("Zur\u00FCcksetzten");
+		btnClear.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				View.this.resetBtnClick();
+			}
+		});
 		topPanel.add(btnClear);
 
 		JButton btnSpeichern = new JButton("Speichern");
@@ -203,6 +213,11 @@ public class View extends JFrame {
 		this.updateKunden();
 		this.fillFahrten();
 		this.updateReservationen();
+	}
+
+
+	protected void resetBtnClick() {
+		// TODO Implement me
 	}
 
 

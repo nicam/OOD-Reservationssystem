@@ -5,6 +5,7 @@ import java.util.Iterator;
 
 import ch.zsg.reservation.model.*;
 
+@SuppressWarnings("serial")
 public class ReservierbareFahrtenManager extends ArrayList<ReservierbareFahrt> {
 	
 

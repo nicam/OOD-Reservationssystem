@@ -1,5 +1,4 @@
 package ch.zsg.reservation.model;
-import java.util.ArrayList;
 
 
 public class ReservierbareFahrt {

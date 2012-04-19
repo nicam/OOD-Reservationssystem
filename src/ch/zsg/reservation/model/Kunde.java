@@ -5,7 +5,7 @@ import java.util.*;
 public class Kunde {
 	private String name, telefon;
 	private Adresse adresse;
-	private List<Reservation> reservationen;
+	private List<Reservation> reservationen = new ArrayList<Reservation>();
 	
 	public Kunde(String name) {
 		this.name = name;
@@ -17,6 +17,15 @@ public class Kunde {
 		this.telefon = telefon;
 		this.adresse = adresse;
 	}
+	
+	public List<Reservation> getReservationen() {
+		return reservationen;
+	}
+
+	public void setReservationen(List<Reservation> reservationen) {
+		this.reservationen = reservationen;
+	}
+
 	public String getName() {
 		return name;
 	}

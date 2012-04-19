@@ -1,23 +1,11 @@
 package ch.zsg.reservation.controller;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
-import java.util.ArrayList;
-
 import javax.swing.*;
-import java.awt.*;
-import javax.swing.event.*;
-
 import ch.zsg.reservation.managers.*;
 import ch.zsg.reservation.model.*;
 import ch.zsg.reservation.view.*;
 
 
-
+@SuppressWarnings("serial")
 public class ReservationSystem extends JFrame {
 	private KundenManager kunden = new KundenManager();
 	private ReservierbareFahrtenManager fahrten = new ReservierbareFahrtenManager();
