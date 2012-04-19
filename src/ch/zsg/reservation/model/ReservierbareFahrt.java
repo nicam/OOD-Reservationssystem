@@ -24,6 +24,94 @@ public class ReservierbareFahrt {
 		this.schiffName = schiffName;
 	}
 	
+	public Station getAbOrt() {
+		return abOrt;
+	}
+
+	public void setAbOrt(Station abOrt) {
+		this.abOrt = abOrt;
+	}
+
+	public Station getAnOrt() {
+		return anOrt;
+	}
+
+	public void setAnOrt(Station anOrt) {
+		this.anOrt = anOrt;
+	}
+
+	public String getAbZeit() {
+		return abZeit;
+	}
+
+	public void setAbZeit(String abZeit) {
+		this.abZeit = abZeit;
+	}
+
+	public String getAnZeit() {
+		return anZeit;
+	}
+
+	public void setAnZeit(String anZeit) {
+		this.anZeit = anZeit;
+	}
+
+	public String getDatum() {
+		return datum;
+	}
+
+	public void setDatum(String datum) {
+		this.datum = datum;
+	}
+
+	public String getFahrtName() {
+		return fahrtName;
+	}
+
+	public void setFahrtName(String fahrtName) {
+		this.fahrtName = fahrtName;
+	}
+
+	public int getFreieTisch() {
+		return freieTisch;
+	}
+
+	public void setFreieTisch(int freieTisch) {
+		this.freieTisch = freieTisch;
+	}
+
+	public int getFreieMitnahme() {
+		return freieMitnahme;
+	}
+
+	public void setFreieMitnahme(int freieMitnahme) {
+		this.freieMitnahme = freieMitnahme;
+	}
+
+	public int getTotalTisch() {
+		return totalTisch;
+	}
+
+	public void setTotalTisch(int totalTisch) {
+		this.totalTisch = totalTisch;
+	}
+
+	public int getTotalMitnahme() {
+		return totalMitnahme;
+	}
+
+	public void setTotalMitnahme(int totalMitnahme) {
+		this.totalMitnahme = totalMitnahme;
+	}
+
+	public Schiff getSchiffName() {
+		return schiffName;
+	}
+
+	public void setSchiffName(Schiff schiffName) {
+		this.schiffName = schiffName;
+	}
+
 	public String toString(){
 		return abZeit + " " + abOrt + " -> " + anZeit + " " + anOrt;
 	}

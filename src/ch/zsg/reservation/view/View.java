@@ -19,6 +19,7 @@ public class View extends JFrame {
 	private final JList list = new JList();
 	private final JList reservationen = new JList();
 	private final ButtonGroup klasse = new ButtonGroup();
+	private JRadioButton rdbtnErste;
 
 	public View(ReservationSystem controller) {
 		this.controller = controller;
@@ -29,7 +30,7 @@ public class View extends JFrame {
 		// Tab Structure
 		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
 		tabbedPane.setLocation(6, 6);
-		tabbedPane.setSize(549, 475);
+		tabbedPane.setSize(560, 480);
 
 		JLayeredPane kundenPanel = new JLayeredPane();
 		JLayeredPane reservationsPanel = new JLayeredPane();
@@ -77,7 +78,7 @@ public class View extends JFrame {
 		panel.setBorder(null);
 		topPanel.add(panel);
 
-		JRadioButton rdbtnErste = new JRadioButton("Erste");
+		rdbtnErste = new JRadioButton("Erste");
 		klasse.add(rdbtnErste);
 		panel.add(rdbtnErste);
 
@@ -101,6 +102,7 @@ public class View extends JFrame {
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(6, 6, 567, 200);
 		bottomPanel.add(scrollPane);
+		reservationen.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		scrollPane.setViewportView(reservationen);
 		reservationen.setLayoutOrientation(JList.HORIZONTAL_WRAP);
 		reservationen.setModel(new AbstractListModel() {
@@ -176,6 +178,14 @@ public class View extends JFrame {
 		ort.setBounds(397, 120, 134, 28);
 		kundenPanel.add(ort);
 		ort.setColumns(10);
+		
+		JLayeredPane layeredPane = new JLayeredPane();
+		tabbedPane.addTab("History", null, layeredPane, null);
+		
+		JList historyList = new JList();
+		historyList.setBounds(0, 0, 0, 0);
+		layeredPane.add(historyList);
+		historyList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 
 		save.addActionListener(new ActionListener() {
 			@Override
@@ -225,7 +235,7 @@ public class View extends JFrame {
 				controller.getKundenVerwaltung().get(comboKunde.getSelectedIndex()),
 				(Integer)spinnerTisch.getValue(),
 				(Integer)spinnerMitnahme.getValue(),
-				2
+				(rdbtnErste.isSelected()) ? 1 : 2
 		);
 		this.updateReservationen();
 	}

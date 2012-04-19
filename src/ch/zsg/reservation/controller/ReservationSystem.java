@@ -35,7 +35,7 @@ public class ReservationSystem extends JFrame {
 		this.fillReservierbareFahrten();
 		View view = new View(this);
 		view.setVisible(true);
-		view.setSize(600, 600);
+		view.setSize(575, 515);
 		view.setDefaultCloseOperation(EXIT_ON_CLOSE);
 	}
 		

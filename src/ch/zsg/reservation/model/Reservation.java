@@ -27,7 +27,8 @@ public class Reservation {
 	}
 	
 	public String toString() {
-		return this.kunde.getName() + " Mitnahme: " + strecken.get(0).mitnahme + " Tisch" + strecken.get(0).tisch;
+		ReservierbareFahrt ersteFahrt = strecken.get(0).getFahrt();
+		return ersteFahrt.getAbOrt() + " -> " + ersteFahrt.getAnOrt() + " Reservation fŸr: " + this.kunde.getName() + " Mitnahme: " + strecken.get(0).getMitnahme() + " Tisch: " + strecken.get(0).getTisch() + " Klasse: " + this.klasse;
 	}
 
 	public Kunde getKunde() {
